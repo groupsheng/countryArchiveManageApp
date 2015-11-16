@@ -29,7 +29,8 @@
 	});
 	},1000);
 	function activeMisTab(tab) {
-		if(!conf[tab]) {
+		var plugin = conf.getPlugin(tab);
+		if(!plugin) {
 			$.messager.alert('提示','请求失败','error');
 			return;
 		}
@@ -38,12 +39,13 @@
 		});
 		var mis_page = $('#mis-center-page');
 		$.ajax({
-			url:conf[tab].url.page,
+			url:plugin.url.page,
 			success: function(htm){
 				mis_page.html(htm);
 				$.parser.parse(mis_page);
-				if(conf[tab].init != null && typeof(conf[tab].init)=="function") {
-					conf[tab].init();
+				plugin.$pageDom = mis_page;
+				if(plugin.init != null && typeof(plugin.init)=="function") {
+					plugin.init();
 				}
 				$.messager.progress('close');
 			},

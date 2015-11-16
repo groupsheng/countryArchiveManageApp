@@ -2,54 +2,60 @@
 /**
 配置
 */
-var conf = [];
-conf["出生证"] = {
+var conf = {};
+conf.getPlugin = function(tab) {
+	for(var plugin in conf) {
+		if(conf[plugin].name == tab) {
+			return conf[plugin];
+		}
+	}
+	return null;
+};
+conf.chusheng = {
 	name:'出生证',
 	group:'户籍证明',
 	init: null,
 	refresh: null,
 	url:null
 };
-conf["出生证"].init = function() {
+conf.chusheng.init = function() {
 $.messager.progress({
 			msg:'加载中...'
 		});
 };
-conf["出生证"].url = {
+conf.chusheng.url = {
 	page:'/cunmin/huji/chusheng'
 };
 //-----------------------------------------
-conf["身份证"] = {
+conf.shenfen = {
 	name:'身份证',
 	group:'户籍证明',
 	init: null,
 	refresh: null,
 	url:null
 };
-conf["身份证"].init = function() {
+conf.shenfen.init = function() {
 
 };
-conf["身份证"].url = {
+conf.shenfen.url = {
 	page:'/cunmin/huji/shenfen'
 };
 //------------------------------------------
 // 程序默认加载完界面调用 init 方法，可以在init中写加载完页面后的一些事件
-conf["用户管理"] = {
+conf.user = {
 		name:'用户管理',
 		group:'后台管理',
 		init:null,
 		refresh: null,
 		url: null
 };
-conf["用户管理"].url = {
+conf.user.url = {
 		page: '/houtai/user/page',
 		edit: '/houtai/user/edit',
 		save: '/houtai/user/save'
 };
-conf["用户管理"].init = function(){
-	$.messager.progress({
-			msg:'加载中...'
-		});
+conf.user.$pageDom = null;
+conf.user.init = function(){
 	var $this = this;
 	$('#user-page-add').click(function(){
 		var user_edit_dlg = $('#user_edit_dlg');
@@ -68,21 +74,21 @@ conf["用户管理"].init = function(){
 		});
 		$.ajax({
 			type: "GET",
-			url:$this.url.edit+'0', 
+			url:$this.url.edit, 
 			success: function(htm){
 				mis_page.html(htm);
 				$.parser.parse(mis_page);
 				$this._bindClick();
-				//$.messager.progress('close');
+				$.messager.progress('close');
 			},
 			error:function(){
 				$.messager.progress('close');
-				//$.messager.alert('提示','请求失败','error');
+				$.messager.alert('提示','请求失败','error');
 			}
 		});
 	});
 };
-conf["用户管理"]._bindClick = function(){
+conf.user._bindClick = function(){
 	var $this = this;
 	$('#user_edit_dlg').find('#user-edit-save').click(function(){
 		$.messager.progress({
@@ -103,6 +109,7 @@ conf["用户管理"]._bindClick = function(){
 			    	 $.messager.alert('提示','添加失败','error');
 			     }
 			     $.messager.progress('close');
+			     $this.$pageDom.find('#user-page-table').datagrid('reload');
 			   },
 			   error:function(){
 					$.messager.progress('close');
