@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+GET		/cunmin/huji/chusheng					HujiCtl.chusheng
+GET		/cunmin/huji/shenfen					HujiCtl.shenfen
+POST	/cunmin/huji							HujiCtl.userjson
+GET 	/cunmin/huji/shenfen/page				HujiCtl.shenfen_page
+GET		/houtai/user/page						UserCtl.page
+GET		/houtai/user/edit						UserCtl.edit
+POST	/houtai/user/save						UserCtl.save
+POST	/houtai/user/get						UserCtl.get
+GET		/cunmin/login							LoginCtl.login	
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
