@@ -11,6 +11,12 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+GET		/cunmin									Application.cunmin
+GET		/cunmin/login							LoginCtl.cunminLogin
+
+GET		/cunqing								Application.cunqing
+GET		/cunqing/login							LoginCtl.cunqingLogin
+
 GET		/cunmin/huji/chusheng					HujiCtl.chusheng
 GET		/cunmin/huji/shenfen					HujiCtl.shenfen
 POST	/cunmin/huji							HujiCtl.userjson
@@ -19,6 +25,5 @@ GET		/houtai/user/page						UserCtl.page
 GET		/houtai/user/edit						UserCtl.edit
 POST	/houtai/user/save						UserCtl.save
 POST	/houtai/user/get						UserCtl.get
-GET		/cunmin/login							LoginCtl.login	
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

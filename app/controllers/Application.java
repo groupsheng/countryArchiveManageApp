@@ -13,5 +13,15 @@ public class Application extends Controller {
 
     	render();
     }
+    
+    public static void cunmin() {
+
+    	render();
+    }
+    
+    public static void cunqing() {
+
+    	render();
+    }
 
 }

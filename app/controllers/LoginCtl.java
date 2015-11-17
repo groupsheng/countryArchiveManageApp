@@ -10,7 +10,11 @@ import play.mvc.Controller;
 
 public class LoginCtl extends Controller {
 
-	public static void login(){
+	public static void cunminLogin(){
+		render();
+	}
+	
+	public static void cunqingLogin(){
 		render();
 	}
 }

@@ -1,0 +1,54 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+	<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px;font-size:22px;">王坛镇上王村档案管理系统</div>
+	<div data-options="region:'west',split:true,collapsible:false" style="width:150px;">
+		<div id="mis-menu-page" class="easyui-accordion" data-options="fit:true,border:false">
+			<div title="文书档案" data-options="selected:true">
+				<ul class="easyui-tree">
+					<li>村委会议</li>
+					<li>合同协议</li>
+					<li>任职公示</li>
+					<li>财务开支</li>
+					<li>养老医疗</li>
+					<li>建房批文</li>
+					<li>股权合作</li>
+				</ul>
+			</div>
+			<div title="会计档案">
+				<ul class="easyui-tree">
+					<li>政府补助</li>
+					<li>集体收益</li>
+					<li>工资开支</li>
+					<li>补贴开支</li>
+				</ul>
+			</div>
+			<div title="声像档案">
+				<ul class="easyui-tree">
+					<li>会议</li>
+					<li>活动</li>
+					<li>村干部</li>
+					<li>村容村貌</li>
+				</ul>
+			</div>
+			<div title="荣誉档案">
+				<ul class="easyui-tree">
+					<li>集体省级</li>
+					<li>集体市级</li>
+					<li>集体区级</li>
+					<li>个人省级</li>
+					<li>个人市级</li>
+					<li>个人区级</li>
+				</ul>
+			</div>
+			<div title="其他">
+				<ul class="easyui-tree">
+					<li>组织沿革</li>
+					<li>村大事记</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-options="region:'center'">
+		<div id="mis-center-page" style="width:100%;height:100%;"></div>
+	</div>
