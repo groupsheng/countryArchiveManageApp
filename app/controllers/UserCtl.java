@@ -16,8 +16,12 @@ public class UserCtl extends Controller {
     }
 	
 	//编辑
-	public static void edit() {
-		render();
+	public static void edit(String id) {
+		User user = new User();
+		if(id!=null) {
+			user = User.findById(id);
+		}
+		render(user);
 	}
 	
 	// save.json
@@ -30,11 +34,19 @@ public class UserCtl extends Controller {
 	}
 	
 	// get.json
-	public static void get() {
-		List<User> users = User.findAll();
+	public static void get(int rows,int page,String username, String fullname) {
+		if(username==null) {
+			username="";
+		}
+		if(fullname==null) {
+			fullname="";
+		}
+		List<User> users = User.find("username like ? and fullname like ?", "%"+username+"%", "%"+fullname+"%").from(rows*(page-1)).fetch(rows*page);
+		int count = User.find("username like ? and fullname like ?", "%"+username+"%", "%"+fullname+"%").fetch().size();
 		DatagridJson json = new DatagridJson();
-		json.total = users.size();
+		json.total = count;
 		json.rows.addAll(users);
 		renderJSON(json);
 	}
+
 }

@@ -1,3 +1,6 @@
+body {
+	font-family:'微软雅黑';
+}
 .mis-page {
 	width:100%;
 	height:100%;
@@ -56,3 +59,57 @@ td.page-head-mid {
 .clear-fixed {
 	clear:both;
 }
+
+.datagrid-body a {
+	color:#0C0CFB;
+	text-decoration:underline;
+}
+/*替换EasyUI样式*/
+/*#mis-menu-page .panel div.accordion-header-selected {
+	background: #3C95C8;
+	color:black;
+	background: -moz-linear-gradient(top, #449ACB 0%, #3591C6 100%);
+	background: -webkit-gradient(linear, left top, left bottom,	color-stop(0%,#449ACB),	color-stop(100%,#3591C6));
+	background: -webkit-linear-gradient(top, #449ACB 0%,#3591C6 100%); 
+	background: -o-linear-gradient(top, #449ACB 0%,#3591C6 100%);
+	background: -ms-linear-gradient(top, #449ACB 0%,#3591C6 100%);
+	background: linear-gradient(top, #449ACB 0%,#3591C6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#449ACB', endColorstr='#3591C6',GradientType=0 );
+}
+#mis-menu-page .panel div.accordion-header-selected .panel-title {
+	color:#fff;
+}
+#mis-menu-page .panel .accordion-header {
+	background: #D4E7F0;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+#mis-menu-page .accordion-header .panel-title {
+	color:#000000;
+}
+#mis-menu-page .panel .accordion-header div.panel-title {
+	margin-left:10px;
+}
+#mis-menu-page .panel .accordion-body {
+	background:#F0F9FD;
+}
+#mis-menu-page .tree-node {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#mis-menu-page .tree-node-selected {
+	border-left:3px solid #EA2020;
+	background:#3EAFE0;
+}
+#mis-menu-page .tree-node-selected .tree-indent {
+	margin-left:-3px;
+}
+div.layout-split-west {
+	border-right:1px solid #B7D5DF;
+	border-top:1px solid #5AB8EF;
+}
+#mis-menu-page .panel-header, 
+#mis-menu-page .panel-body {
+	border-color:#B9CAD3;
+}*/
+/*End for EasyUI样式*/

@@ -4,11 +4,12 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-		<link rel="stylesheet" type="text/css" href="@{'/public/easyui/themes/gray/easyui.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/reset.css'}">
+		#{get 'moreStyles' /}
+		<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+		<link rel="stylesheet" type="text/css" href="@{'/public/easyui/themes/bootstrap/easyui.css'}">
 		<link rel="stylesheet" type="text/css" href="@{'/public/easyui/themes/icon.css'}">
+		<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
     </head>
     <body class="easyui-layout">
         #{doLayout /}

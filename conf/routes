@@ -22,6 +22,7 @@ GET		/cunmin/huji/shenfen					HujiCtl.shenfen
 POST	/cunmin/huji							HujiCtl.userjson
 GET 	/cunmin/huji/shenfen/page				HujiCtl.shenfen_page
 GET		/houtai/user/page						UserCtl.page
+POST	/houtai/user/edit						UserCtl.edit
 GET		/houtai/user/edit						UserCtl.edit
 POST	/houtai/user/save						UserCtl.save
 POST	/houtai/user/get						UserCtl.get

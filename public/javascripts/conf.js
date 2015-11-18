@@ -1,3 +1,23 @@
+$.extend($.fn.datagrid.defaults, {
+	idField: "id",
+	resizeHandle: "both",
+	fit: true,
+	striped: true,
+	multiSort: true,
+	fitColumns: true,
+	autoRowHeight: true,
+	nowrap: true,
+	rownumbers: true,
+	checkOnSelect: false,
+	selectOnCheck: false,
+	singleSelect: true,
+	ctrlSelect: true,
+	pagination: true,
+	pageSize: 20,
+	pageList: [
+			10, 20, 30, 40, 50, 100
+	],
+});
 
 /**
 配置
@@ -11,6 +31,8 @@ conf.getPlugin = function(tab) {
 	}
 	return null;
 };
+
+//----------------------------------------
 conf.chusheng = {
 	name:'出生证',
 	group:'户籍证明',
@@ -55,6 +77,7 @@ conf.user.url = {
 		save: '/houtai/user/save'
 };
 conf.user.$pageDom = null;
+conf.user.$datagrid = null;
 conf.user.init = function(){
 	var $this = this;
 	$('#user-page-add').click(function(){
@@ -67,7 +90,7 @@ conf.user.init = function(){
 			title:'新增用户',
 			width:400,
 			height:300,
-			modal:true			
+			modal:true
 		});
 		$.messager.progress({
 			msg:'加载中...'
@@ -87,6 +110,7 @@ conf.user.init = function(){
 			}
 		});
 	});
+	conf.user.$datagrid = $this.$pageDom.find('#user-page-table');
 };
 conf.user._bindClick = function(){
 	var $this = this;
@@ -96,7 +120,6 @@ conf.user._bindClick = function(){
 		});
 		
 		var data = $('#user_edit_dlg').find('form').serialize();
-		//data = decodeURIComponent(data,true);//解决中文乱码
 		$.ajax({
 			   type: "POST",
 			   url: $this.url.save,
@@ -109,16 +132,57 @@ conf.user._bindClick = function(){
 			    	 $.messager.alert('提示','添加失败','error');
 			     }
 			     $.messager.progress('close');
-			     $this.$pageDom.find('#user-page-table').datagrid('reload');
+			     $this.$datagrid.datagrid('reload');
 			   },
 			   error:function(){
 					$.messager.progress('close');
 					$.messager.alert('提示','请求失败','error');
 			}
-		});	
+		});
 	});
 	$('#user_edit_dlg').find('#user-edit-cancel').click(function(){
 		$('#user_edit_dlg').dialog("close");
 	});
+};
+conf.user.search = function(){
+	 this.$datagrid.datagrid('load', {
+		 username: $('#search-user-page input[name="username"]').eq(0).val(),
+		 fullname: $('#search-user-page input[name="fullname"]').eq(0).val()
+	 });
+};
+conf.user.edit = function(id){
+	var $this = this;
+	var user_edit_dlg = $('#user_edit_dlg');
+	if(user_edit_dlg.size()==0) {
+		$('<div id="user_edit_dlg"></div>').appendTo('body');
+	}
+	var mis_page = $('#user_edit_dlg');
+	mis_page.dialog({
+		title:'新增用户',
+		width:400,
+		height:300,
+		modal:true
+	});
+	$.messager.progress({
+		msg:'加载中...'
+	});
+	$.ajax({
+		type: "POST",
+		data: {id:id},
+		url:$this.url.edit, 
+		success: function(htm){
+			mis_page.html(htm);
+			$.parser.parse(mis_page);
+			$this._bindClick();
+			$.messager.progress('close');
+		},
+		error:function(){
+			$.messager.progress('close');
+			$.messager.alert('提示','请求失败','error');
+		}
+	});
+}
+conf.user.format = function(val, row){
+	return '<a href="javascript:conf.user.edit(\'' + row.id + '\');">编辑</a>';
 };
 
