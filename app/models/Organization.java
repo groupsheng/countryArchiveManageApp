@@ -7,48 +7,52 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import play.db.jpa.GenericModel;
 import play.db.jpa.Model;
 @Entity
-public class User extends GenericModel {
+public class Organization extends GenericModel {
 	@Id
 	@GeneratedValue(generator = "system-uuid")
 	@GenericGenerator(name="system-uuid",strategy="uuid")
 	public String id;
 	
 	/**
-	 * 用户姓名
+	 * 机构名
 	 */
-	public String fullname;
+	public String name;
 	
 	/**
-	 * 用户电话
+	 * 机构代码
 	 */
-	public String phone;
+	public String code;
 	
 	/**
-	 * 用户账号
+	 * 父功能
 	 */
-	public String username;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "parent_id")
+	public Organization parent = null;
 	
 	/**
-	 * 角色
+	 * 子功能
 	 */
-	@OneToMany(fetch = FetchType.LAZY)
-	public List<Role> roles;
+	@OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
+	@OrderBy(value = "orderIndex asc")
+	public List<Organization> children = null;
 	
 	/**
-	 * 组织机构
+	 * 排序号
 	 */
-	@OneToOne
-	public Organization organization;
+	public int orderIndex = 0;
 	
-	public User() {
+	public Organization() {
 		
 	}
 

@@ -1,0 +1,37 @@
+<div class="mis-page">
+	<table class="mis-page-table">
+		<tr style="height:30px;">
+			<td>
+				<div class="mis-page-title">
+					<div class="title">权限管理</div>
+					<div class="btns">
+						<a href="#" id="power-page-add" class="easyui-linkbutton" iconCls="icon-add">新增</a>
+					</div>
+					<div class="clear-fixed"></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="power-page-table" class="easyui-datagrid" style="width:100%;"
+						url="/houtai/power/get" toolbar="#search-power-page">
+					<thead>
+						<tr>
+							<th field="id" hidden="true">id</th>
+							<th field="name" width="120" align="center">权限名</th>
+							<th field="code" width="120" align="center">代码</th>
+							<th field="update" width="40" align="center" formatter="conf.power.format">操作</th>
+						</tr>
+					</thead>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="search-power-page" style="padding:2px 5px;">
+	<span>权限名:</span>
+	<input name="name" style="line-height:26px;border:1px solid #ccc">
+	<span>代码:</span>
+	<input name="code" style="line-height:26px;border:1px solid #ccc">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="javascript:conf.power.search();">查询</a>
+</div>

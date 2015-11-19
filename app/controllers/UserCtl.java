@@ -26,6 +26,9 @@ public class UserCtl extends Controller {
 	
 	// save.json
 	public static void save(User user) {
+		if(user.id == null || user.id.equals("")) {
+			user.id = null;
+		}
 		user.save();
 		JsonObj json = new JsonObj();
 		json.type = "success";

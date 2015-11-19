@@ -17,14 +17,31 @@ GET		/cunmin/login							LoginCtl.cunminLogin
 GET		/cunqing								Application.cunqing
 GET		/cunqing/login							LoginCtl.cunqingLogin
 
-GET		/cunmin/huji/chusheng					HujiCtl.chusheng
-GET		/cunmin/huji/shenfen					HujiCtl.shenfen
-POST	/cunmin/huji							HujiCtl.userjson
-GET 	/cunmin/huji/shenfen/page				HujiCtl.shenfen_page
+# User
 GET		/houtai/user/page						UserCtl.page
 POST	/houtai/user/edit						UserCtl.edit
 GET		/houtai/user/edit						UserCtl.edit
 POST	/houtai/user/save						UserCtl.save
 POST	/houtai/user/get						UserCtl.get
+
+# Power
+GET		/houtai/power/page						PowerCtl.page
+POST	/houtai/power/edit						PowerCtl.edit
+GET		/houtai/power/edit						PowerCtl.edit
+POST	/houtai/power/save						PowerCtl.save
+POST	/houtai/power/get						PowerCtl.get
+
+# Role
+GET		/houtai/role/page						RoleCtl.page
+POST	/houtai/role/edit						RoleCtl.edit
+GET		/houtai/role/edit						RoleCtl.edit
+POST	/houtai/role/save						RoleCtl.save
+POST	/houtai/role/get						RoleCtl.get
+
+GET		/cunmin/huji/chusheng					HujiCtl.chusheng
+GET		/cunmin/huji/shenfen					HujiCtl.shenfen
+POST	/cunmin/huji							HujiCtl.userjson
+GET 	/cunmin/huji/shenfen/page				HujiCtl.shenfen_page
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

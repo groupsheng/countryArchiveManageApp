@@ -8,47 +8,37 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import play.db.jpa.GenericModel;
 import play.db.jpa.Model;
 @Entity
-public class User extends GenericModel {
+public class Role extends GenericModel {
 	@Id
 	@GeneratedValue(generator = "system-uuid")
 	@GenericGenerator(name="system-uuid",strategy="uuid")
 	public String id;
 	
 	/**
-	 * 用户姓名
+	 * 角色名
 	 */
-	public String fullname;
+	public String name;
 	
 	/**
-	 * 用户电话
+	 * 描述
 	 */
-	public String phone;
+	public String remark;
 	
 	/**
-	 * 用户账号
-	 */
-	public String username;
-	
-	/**
-	 * 角色
+	 * 权限
 	 */
 	@OneToMany(fetch = FetchType.LAZY)
-	public List<Role> roles;
+	@OrderBy(value = "orderIndex asc, code asc")
+	public List<Power> powers;
 	
-	/**
-	 * 组织机构
-	 */
-	@OneToOne
-	public Organization organization;
-	
-	public User() {
+	public Role() {
 		
 	}
 
