@@ -32,7 +32,7 @@ public class User extends GenericModel {
 	public String phone;
 	
 	/**
-	 * 用户
+	 * 用户账号属性
 	 */
 	public String username;
 	
