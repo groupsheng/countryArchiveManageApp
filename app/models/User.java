@@ -32,18 +32,18 @@ public class User extends GenericModel {
 	public String phone;
 	
 	/**
-	 * 用户账号
+	 * 用户账号属性
 	 */
 	public String username;
 	
 	/**
-	 * 角色
+	 * 角色属性
 	 */
 	@OneToMany(fetch = FetchType.LAZY)
 	public List<Role> roles;
 	
 	/**
-	 * 组织机构
+	 * 组织机构属性
 	 */
 	@OneToOne
 	public Organization organization;
