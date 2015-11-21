@@ -9,7 +9,7 @@ import models.*;
 
 public class Application extends Controller {
 
-	// github 测试
+	// github 测试版本
     public static void index() {
 
     	render();
