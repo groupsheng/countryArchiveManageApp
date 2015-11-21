@@ -21,10 +21,5 @@
 			<type>2</type>
 			<location>D:/project/play-1.4.0/modules/docviewer/app</location>
 		</link>
-		<link>
-			<name>public/docviewer</name>
-			<type>2</type>
-			<location>D:/project/play-1.4.0/modules/docviewer/public</location>
-		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-//------------------------------------------
-// 程序默认加载完界面调用 init 方法，可以在init中写加载完页面后的一些事件
-=======
-// role
->>>>>>> 94030c69e515c1494273e2cb529d08ae51dc27ba
+
 conf.role = {
 		name:'角色管理',
 		group:'后台管理',
@@ -27,11 +22,7 @@ conf.role.init = function(){
 		}
 		var mis_page = $('#role_edit_dlg');
 		mis_page.dialog({
-<<<<<<< HEAD
 			title:'新增角色',
-=======
-			title:'新增权限',
->>>>>>> 94030c69e515c1494273e2cb529d08ae51dc27ba
 			width:400,
 			height:300,
 			modal:true
@@ -90,11 +81,7 @@ conf.role._bindClick = function(){
 };
 conf.role.search = function(){
 	 this.$datagrid.datagrid('load', {
-<<<<<<< HEAD
 		 name: $('#search-role-page input[name="name"]').eq(0).val(),
-=======
-		 name: $('#search-role-page input[name="name"]').eq(0).val()
->>>>>>> 94030c69e515c1494273e2cb529d08ae51dc27ba
 	 });
 };
 conf.role.edit = function(id){
@@ -105,11 +92,7 @@ conf.role.edit = function(id){
 	}
 	var mis_page = $('#role_edit_dlg');
 	mis_page.dialog({
-<<<<<<< HEAD
 		title:'新增用户',
-=======
-		title:'编辑权限',
->>>>>>> 94030c69e515c1494273e2cb529d08ae51dc27ba
 		width:400,
 		height:300,
 		modal:true
@@ -135,8 +118,4 @@ conf.role.edit = function(id){
 }
 conf.role.format = function(val, row){
 	return '<a href="javascript:conf.role.edit(\'' + row.id + '\');">编辑</a>';
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 94030c69e515c1494273e2cb529d08ae51dc27ba
