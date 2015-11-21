@@ -10,6 +10,7 @@ import models.Role;
 import play.mvc.Controller;
 
 public class RoleCtl extends Controller {
+	
 	//列表
 	public static void page() {		
 		render();
