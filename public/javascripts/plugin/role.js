@@ -23,7 +23,6 @@ conf.role.init = function(){
 		var mis_page = $('#role_edit_dlg');
 		mis_page.dialog({
 			title:'新增角色',
-
 			width:400,
 			height:300,
 			modal:true
@@ -82,6 +81,7 @@ conf.role._bindClick = function(){
 };
 conf.role.search = function(){
 	 this.$datagrid.datagrid('load', {
+		 name: $('#search-role-page input[name="name"]').eq(0).val(),
 	 });
 };
 conf.role.edit = function(id){
@@ -92,7 +92,7 @@ conf.role.edit = function(id){
 	}
 	var mis_page = $('#role_edit_dlg');
 	mis_page.dialog({
-		title:'编辑权限',
+		title:'新增用户',
 		width:400,
 		height:300,
 		modal:true
