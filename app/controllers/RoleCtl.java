@@ -8,21 +8,6 @@ import models.DatagridJson;
 import models.JsonObj;
 import models.Role;
 import play.mvc.Controller;
-//共和国
-
-
-
-//共和国
-
-
-
-//共和国
-
-
-
-//共和国
-
-
 
 public class RoleCtl extends Controller {
 	
