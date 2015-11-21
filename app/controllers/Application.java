@@ -9,6 +9,7 @@ import models.*;
 
 public class Application extends Controller {
 
+	// github 测试
     public static void index() {
 
     	render();
