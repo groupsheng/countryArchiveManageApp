@@ -8,7 +8,20 @@ import models.DatagridJson;
 import models.JsonObj;
 import models.Role;
 import play.mvc.Controller;
+//测试
+<<<<<<< HEAD
+// merge again
 
+
+=======
+>>>>>>> 8ade6611ac3ef8b4838e0c6c65eb8c3cf94e575e
+
+<<<<<<< HEAD
+// merge again
+
+
+=======
+>>>>>>> 8ade6611ac3ef8b4838e0c6c65eb8c3cf94e575e
 public class RoleCtl extends Controller {
 	
 	//列表
