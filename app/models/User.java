@@ -43,7 +43,7 @@ public class User extends GenericModel {
 	public List<Role> roles;
 	
 	/**
-	 * 组织机构
+	 * 组织机构属性
 	 */
 	@OneToOne
 	public Organization organization;
