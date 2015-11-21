@@ -9,9 +9,12 @@ import models.JsonObj;
 import models.Role;
 import play.mvc.Controller;
 
+<<<<<<< HEAD
 // merge again
 
 
+=======
+>>>>>>> 8ade6611ac3ef8b4838e0c6c65eb8c3cf94e575e
 public class RoleCtl extends Controller {
 	
 	//列表
