@@ -22,6 +22,13 @@ import play.mvc.Controller;
 
 =======
 >>>>>>> 8ade6611ac3ef8b4838e0c6c65eb8c3cf94e575e
+
+<<<<<<< HEAD
+// merge again
+
+
+=======
+>>>>>>> 8ade6611ac3ef8b4838e0c6c65eb8c3cf94e575e
 public class RoleCtl extends Controller {
 	
 	//列表
