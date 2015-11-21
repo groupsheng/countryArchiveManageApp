@@ -37,7 +37,7 @@ public class User extends GenericModel {
 	public String username;
 	
 	/**
-	 * 角色
+	 * 角色属性
 	 */
 	@OneToMany(fetch = FetchType.LAZY)
 	public List<Role> roles;
