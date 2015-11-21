@@ -1,0 +1,35 @@
+<div class="mis-page">
+	<table class="mis-page-table">
+		<tr style="height:30px;">
+			<td>
+				<div class="mis-page-title">
+					<div class="title">角色管理</div>
+					<div class="btns">
+						<a href="#" id="role-page-add" class="easyui-linkbutton" iconCls="icon-add">新增</a>
+					</div>
+					<div class="clear-fixed"></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="role-page-table" class="easyui-datagrid" style="width:100%;"
+						url="/houtai/role/get" toolbar="#search-role-page">
+					<thead>
+						<tr>
+							<th field="id" hidden="true">id</th>
+							<th field="name" width="120" align="center">角色名</th>
+							<th field="remark" width="120" align="center">描述</th>
+							<th field="update" width="40" align="center" formatter="conf.role.format">操作</th>
+						</tr>
+					</thead>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="search-role-page" style="padding:2px 5px;">
+	<span>角色名:</span>
+	<input name="name" style="line-height:26px;border:1px solid #ccc">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="javascript:conf.role.search();">查询</a>
+</div>

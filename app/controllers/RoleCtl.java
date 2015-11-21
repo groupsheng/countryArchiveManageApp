@@ -10,6 +10,7 @@ import models.Role;
 import play.mvc.Controller;
 
 public class RoleCtl extends Controller {
+	
 	//列表
 	public static void page() {		
 		render();
@@ -25,8 +26,11 @@ public class RoleCtl extends Controller {
 	}
 	
 	// save.json
-	public static void save(Role user) {
-		user.save();
+	public static void save(Role role) {
+		if(role.id == null || role.id.equals("")) {
+			role.id = null;
+		}
+		role.save();
 		JsonObj json = new JsonObj();
 		json.type = "success";
 		json.data = "";
@@ -38,7 +42,7 @@ public class RoleCtl extends Controller {
 		if(name==null) {
 			name="";
 		}
-		List<Role> roles = Role.find("user like ?", "%"+name+"%").from(rows*(page-1)).fetch(rows*page);
+		List<Role> roles = Role.find("name like ?", "%"+name+"%").from(rows*(page-1)).fetch(rows*page);
 		int count = Role.find("name like ?", "%"+name+"%").fetch().size();
 		DatagridJson json = new DatagridJson();
 		json.total = count;
