@@ -8,7 +8,7 @@ import models.DatagridJson;
 import models.JsonObj;
 import models.Power;
 import play.mvc.Controller;
-///2222222222
+
 public class PowerCtl extends Controller {
 	//列表
 	public static void page() {		
