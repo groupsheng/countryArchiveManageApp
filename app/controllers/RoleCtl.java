@@ -9,11 +9,7 @@ import models.JsonObj;
 import models.Role;
 import play.mvc.Controller;
 
-//xxxxxxx
-// asll os 
-// asll os 
-
-
+//xxx
 public class RoleCtl extends Controller {
 	
 	//列表
