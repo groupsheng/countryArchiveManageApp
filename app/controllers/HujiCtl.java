@@ -7,11 +7,7 @@ import java.util.Map;
 import models.DatagridJson;
 import play.mvc.Controller;
 //XXXX
-//XXX
-//xxxxxxxxxxx
-//huji
-//huji
-xxxxxx
+//zzzzzzzzzzzzzz
 public class HujiCtl extends Controller {
 	//出生证
 	public static void chusheng() {
