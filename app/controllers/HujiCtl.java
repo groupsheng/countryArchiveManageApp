@@ -6,8 +6,6 @@ import java.util.Map;
 
 import models.DatagridJson;
 import play.mvc.Controller;
-//XXXX
-//zzzzzzzzzzzzzz
 //zzzzzzzzzzzzzz
 public class HujiCtl extends Controller {
 	//出生证
