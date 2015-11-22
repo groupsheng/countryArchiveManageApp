@@ -8,6 +8,7 @@ import models.DatagridJson;
 import play.mvc.Controller;
 //XXXX
 //zzzzzzzzzzzzzz
+//zzzzzzzzzzzzzz
 public class HujiCtl extends Controller {
 	//出生证
 	public static void chusheng() {
