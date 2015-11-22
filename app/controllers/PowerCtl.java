@@ -9,6 +9,7 @@ import models.JsonObj;
 import models.Power;
 import play.mvc.Controller;
 
+//88
 public class PowerCtl extends Controller {
 	//列表
 	public static void page() {		
