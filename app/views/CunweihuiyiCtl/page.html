@@ -1,0 +1,35 @@
+<div class="mis-page">
+	<table class="mis-page-table">
+		<tr style="height:30px;">
+			<td>
+				<div class="mis-page-title">
+					<div class="title">村委会议管理</div>
+					<div class="btns">
+						<a href="#" id="cunweihuiyi-page-add" class="easyui-linkbutton" iconCls="icon-add">新增</a>
+					</div>
+					<div class="clear-fixed"></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="cunweihuiyi-page-table" class="easyui-datagrid" style="width:100%;"
+						url="/houtai/cunweihuiyi/get" toolbar="#search-cunweihuiyi-page">
+					<thead>
+						<tr>
+							<th field="id" hidden="true">id</th>
+							<th field="meeting_title" width="120" align="center">会议标题</th>
+							<th field="meeting_place" width="120" align="center">会议地点</th>
+							<th field="update" width="40" align="center" formatter="conf.cunweihuiyi.format">操作</th>
+						</tr>
+					</thead>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="search-cunweihuiyi-page" style="padding:2px 5px;">
+	<span>村委会议标题:</span>
+	<input name="meeting_title" style="line-height:26px;border:1px solid #ccc">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="javascript:conf.cunweihuiyi.search();">查询</a>
+</div>

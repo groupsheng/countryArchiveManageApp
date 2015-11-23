@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/reset.css'}">
+		#{get 'moreStyles' /}
+		<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+		<link rel="stylesheet" type="text/css" href="@{'/public/easyui/themes/bootstrap/easyui.css'}">
+		<link rel="stylesheet" type="text/css" href="@{'/public/easyui/themes/icon.css'}">
+		<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+    </head>
+    <body class="easyui-layout">
+        #{doLayout /}
+        
+       
+        #{get 'moreScripts' /}
+		<script type="text/javascript" src="@{'/public/easyui/jquery.min.js'}" charset="utf-8"></script>
+		<script type="text/javascript" src="@{'/public/easyui/jquery.easyui.min.js'}" charset="utf-8"></script>
+		<script type="text/javascript" src="@{'/public/easyui/locale/easyui-lang-zh_CN.js'}" charset="utf-8"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/conf.js'}" charset="utf-8"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/plugin/cunweihuiyi.js'}" charset="utf-8"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/plugin/contract.js'}" charset="utf-8"></script>
+
+	<script>	
+	setTimeout(function(){
+	$('div#mis-menu-page .easyui-tree .tree-node').click(function(){
+		var $this = $(this);
+		var title = ''+$this.text();
+		activeMisTab(title);	
+	});
+	},1000);
+	function activeMisTab(tab) {
+		var plugin = conf.getPlugin(tab);
+		if(!plugin) {
+			$.messager.alert('提示','请求失败','error');
+			return;
+		}
+		$.messager.progress({
+			msg:'加载中...'
+		});
+		var mis_page = $('#mis-center-page');
+		$.ajax({
+			url:plugin.url.page,
+			success: function(htm){
+				mis_page.html(htm);
+				$.parser.parse(mis_page);
+				plugin.$pageDom = mis_page;
+				if(plugin.init != null && typeof(plugin.init)=="function") {
+					plugin.init();
+				}
+				$.messager.progress('close');
+			},
+			error:function(){
+				$.messager.progress('close');
+				$.messager.alert('提示','请求失败','error');
+			}
+		});
+	}
+
+	</script>
+    </body>
+</html>

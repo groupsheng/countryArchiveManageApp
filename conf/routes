@@ -43,5 +43,23 @@ GET		/cunmin/huji/shenfen					HujiCtl.shenfen
 POST	/cunmin/huji							HujiCtl.userjson
 GET 	/cunmin/huji/shenfen/page				HujiCtl.shenfen_page
 
+# Cunweihuiyi
+
+GET		/houtai/cunweihuiyi/page				CunweihuiyiCtl.page
+POST	/houtai/cunweihuiyi/edit				CunweihuiyiCtl.edit
+GET		/houtai/cunweihuiyi/edit				CunweihuiyiCtl.edit
+POST	/houtai/cunweihuiyi/save				CunweihuiyiCtl.save
+POST	/houtai/cunweihuiyi/get					CunweihuiyiCtl.get
+
+# Contract
+
+GET		/houtai/contract/page					ContractCtl.page
+POST	/houtai/contract/edit					ContractCtl.edit
+GET		/houtai/contract/edit					ContractCtl.edit
+POST	/houtai/contract/save					ContractCtl.save
+POST	/houtai/contract/get					ContractCtl.get
+
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
