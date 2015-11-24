@@ -1,0 +1,36 @@
+<div class="mis-page">
+<form>
+	<table>
+		<tr>
+			<th>养老医疗标题:
+			</th>
+			<td>
+				<input type="hidden" name="pensionHealth.id" value="${pensionHealth?.id}">
+				<input class="easyui-textbox" type="text" name="pensionHealth.title" value="${pensionHealth?.title}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>发布日期:
+			</th>
+			<td>
+				<input name="pensionHealth.post_date" class="easyui-textbox" value="${pensionHealth?.post_date}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>发布者:
+			</th>
+			<td>
+				<input name="pensionHealth.author" class="easyui-textbox" value="${pensionHealth?.author}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div>
+					<a href="#" id="pensionHealth-edit-save" class="easyui-linkbutton" iconCls="icon-save">确认</a>
+					<a href="#" id="pensionHealth-edit-cancel" class="easyui-linkbutton" iconCls="icon-cancel">取消</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>

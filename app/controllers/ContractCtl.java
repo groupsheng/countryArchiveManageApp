@@ -11,8 +11,8 @@ import models.JsonObj;
 import play.mvc.Controller;
 
 /**
- * @author Coffee
- * 
+ * @author 	 Coffee
+ * @category 合同协议控制类
  */
 public class ContractCtl extends Controller {
 

@@ -43,7 +43,7 @@ public class Contract extends GenericModel {
 	public String main_text;
 
 	// 作者--默认当前登陆文书 
-	public String Anthor;
+	public String author;
 
 	// 附件
 	public String appendix;

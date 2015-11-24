@@ -59,6 +59,45 @@ GET		/houtai/contract/edit					ContractCtl.edit
 POST	/houtai/contract/save					ContractCtl.save
 POST	/houtai/contract/get					ContractCtl.get
 
+# Renzhigongshi
+
+GET		/houtai/renzhigongshi/page					RenzhigongshiCtl.page
+POST	/houtai/renzhigongshi/edit					RenzhigongshiCtl.edit
+GET		/houtai/renzhigongshi/edit					RenzhigongshiCtl.edit
+POST	/houtai/renzhigongshi/save					RenzhigongshiCtl.save
+POST	/houtai/renzhigongshi/get					RenzhigongshiCtl.get
+
+# FinanceCost
+
+GET		/houtai/financeCost/page					FinanceCostCtl.page
+POST	/houtai/financeCost/edit					FinanceCostCtl.edit
+GET		/houtai/financeCost/edit					FinanceCostCtl.edit
+POST	/houtai/financeCost/save					FinanceCostCtl.save
+POST	/houtai/financeCost/get						FinanceCostCtl.get
+
+# PensionHealth
+
+GET		/houtai/pensionHealth/page					PensionHealthCtl.page
+POST	/houtai/pensionHealth/edit					PensionHealthCtl.edit
+GET		/houtai/pensionHealth/edit					PensionHealthCtl.edit
+POST	/houtai/pensionHealth/save					PensionHealthCtl.save
+POST	/houtai/pensionHealth/get					PensionHealthCtl.get
+
+# BuildingApprovals
+
+GET		/houtai/buildingApprovals/page				BuildingApprovalsCtl.page
+POST	/houtai/buildingApprovals/edit				BuildingApprovalsCtl.edit
+GET		/houtai/buildingApprovals/edit				BuildingApprovalsCtl.edit
+POST	/houtai/buildingApprovals/save				BuildingApprovalsCtl.save
+POST	/houtai/buildingApprovals/get				BuildingApprovalsCtl.get
+
+# GuquanCooperation
+
+GET		/houtai/guquanCooperation/page				GuquanCooperationCtl.page
+POST	/houtai/guquanCooperation/edit				GuquanCooperationCtl.edit
+GET		/houtai/guquanCooperation/edit				GuquanCooperationCtl.edit
+POST	/houtai/guquanCooperation/save				GuquanCooperationCtl.save
+POST	/houtai/guquanCooperation/get				GuquanCooperationCtl.get
 
 
 # Catch all
