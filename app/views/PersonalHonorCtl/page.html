@@ -1,0 +1,39 @@
+<div class="mis-page">
+	<table class="mis-page-table">
+		<tr style="height:30px;">
+			<td>
+				<div class="mis-page-title">
+					<div class="title">个人荣誉管理</div>
+					<div class="btns">
+						<a href="#" id="personalHonor-page-add" class="easyui-linkbutton" iconCls="icon-add">新增</a>
+					</div>
+					<div class="clear-fixed"></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="personalHonor-page-table" class="easyui-datagrid" style="width:100%;"
+						url="/houtai/personalHonor/get" toolbar="#search-personalHonor-page">
+					<thead>
+						<tr>
+							<th field="id" hidden="true">id</th>
+							<th field="title" width="120" align="center">公告名称</th>
+							<th field="honorLevel" width="120" align="center">荣誉级别</th>
+							<th field="honorGroup" width="120" align="center">所属集体</th>
+							<th field="awardedBy" width="120" align="center">颁发单位</th>
+							<th field="post_date" width="120" align="center">发布时间</th>
+							<th field="author" width="120" align="center">发布人</th>
+							<th field="update" width="40" align="center" formatter="conf.personalHonor.format">操作</th>
+						</tr>
+					</thead>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="search-personalHonor-page" style="padding:2px 5px;">
+	<span>标题:</span>
+	<input name="title" style="line-height:26px;border:1px solid #ccc">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="javascript:conf.personalHonor.search();">查询</a>
+</div>

@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee
- *
+ * 
+ * @date 2015/11/23
+ * 
+ * @table 养老医疗实体类（文书档案）
  */
 @Entity
 public class PensionHealth extends GenericModel{

@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee
- *
+ * 
+ * @date 2015/11/24
+ * 
+ * @table 财务开支实体类（文书档案）
  */
 @Entity
 public class FinanceCost extends GenericModel{
@@ -23,7 +26,7 @@ public class FinanceCost extends GenericModel{
 	@GenericGenerator(name="system-uuid",strategy="uuid")
 	public String id;
 	
-	// 公告标题
+	// 开支项目名称
 	public String title;
 	
 	// 发布日期--默认当前时间

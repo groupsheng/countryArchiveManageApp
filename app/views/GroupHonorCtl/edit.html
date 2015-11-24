@@ -1,0 +1,57 @@
+<div class="mis-page">
+<form>
+	<table>
+		<tr>
+			<th>标题:
+			</th>
+			<td>
+				<input type="hidden" name="groupHonor.id" value="${groupHonor?.id}">
+				<input class="easyui-textbox" type="text" name="groupHonor.title" value="${groupHonor?.title}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>荣誉级别:
+			</th>
+			<td>
+				<input name="groupHonor.honorLevel" class="easyui-textbox" value="${groupHonor?.honorLevel}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>所属集体:
+			</th>
+			<td>
+				<input name="groupHonor.honorGroup" class="easyui-textbox" value="${groupHonor?.honorGroup}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>颁发单位:
+			</th>
+			<td>
+				<input name="groupHonor.awardedBy" class="easyui-textbox" value="${groupHonor?.awardedBy}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>发布日期:
+			</th>
+			<td>
+				<input name="groupHonor.post_date" class="easyui-textbox" value="${groupHonor?.post_date}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<th>发布者:
+			</th>
+			<td>
+				<input name="groupHonor.author" class="easyui-textbox" value="${groupHonor?.author}" style="width:100%;height:32px">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div>
+					<a href="#" id="groupHonor-edit-save" class="easyui-linkbutton" iconCls="icon-save">确认</a>
+					<a href="#" id="groupHonor-edit-cancel" class="easyui-linkbutton" iconCls="icon-cancel">取消</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>

@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee
- * @table  任职公示实体类
+ * 
+ * @date 2015/11/24
+ * 
+ * @table  任职公示实体类（文书档案）
  */
 
 @Entity
@@ -29,6 +32,9 @@ public class Renzhigongshi extends GenericModel{
 	
 	// 发布日期--默认当前时间
 	public String post_date;
+	
+	// 发布单位
+	public String post_danwei;
 	
 	// 公示正文
 	public String main_text;

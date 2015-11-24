@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee
- *
+ * 
+ * @date 2015/11/24
+ * 
+ * @table 建房批文实体类（文书档案）
  */
 @Entity
 public class BuildingApprovals extends GenericModel{

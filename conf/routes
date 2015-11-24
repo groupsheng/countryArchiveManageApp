@@ -100,5 +100,87 @@ POST	/houtai/guquanCooperation/save				GuquanCooperationCtl.save
 POST	/houtai/guquanCooperation/get				GuquanCooperationCtl.get
 
 
+# Butiekaizhi
+
+GET		/houtai/butiekaizhi/page			ButiekaizhiCtl.page
+POST	/houtai/butiekaizhi/edit			ButiekaizhiCtl.edit
+GET		/houtai/butiekaizhi/edit			ButiekaizhiCtl.edit
+POST	/houtai/butiekaizhi/save			ButiekaizhiCtl.save
+POST	/houtai/butiekaizhi/get				ButiekaizhiCtl.get
+
+
+# Gongzikaizhi
+
+GET		/houtai/gongzikaizhi/page				GongzikaizhiCtl.page
+POST	/houtai/gongzikaizhi/edit				GongzikaizhiCtl.edit
+GET		/houtai/gongzikaizhi/edit				GongzikaizhiCtl.edit
+POST	/houtai/gongzikaizhi/save				GongzikaizhiCtl.save
+POST	/houtai/gongzikaizhi/get				GongzikaizhiCtl.get
+
+# Jitiliyi
+
+GET		/houtai/jitiliyi/page				JitiliyiCtl.page
+POST	/houtai/jitiliyi/edit				JitiliyiCtl.edit
+GET		/houtai/jitiliyi/edit				JitiliyiCtl.edit
+POST	/houtai/jitiliyi/save				JitiliyiCtl.save
+POST	/houtai/jitiliyi/get				JitiliyiCtl.get
+
+
+# Zhengfubuzhu
+
+GET		/houtai/zhengfubuzhu/page				ZhengfubuzhuCtl.page
+POST	/houtai/zhengfubuzhu/edit				ZhengfubuzhuCtl.edit
+GET		/houtai/zhengfubuzhu/edit				ZhengfubuzhuCtl.edit
+POST	/houtai/zhengfubuzhu/save				ZhengfubuzhuCtl.save
+POST	/houtai/zhengfubuzhu/get				ZhengfubuzhuCtl.get
+
+# Meeting
+
+GET		/houtai/meeting/page				MeetingCtl.page
+POST	/houtai/meeting/edit				MeetingCtl.edit
+GET		/houtai/meeting/edit				MeetingCtl.edit
+POST	/houtai/meeting/save				MeetingCtl.save
+POST	/houtai/meeting/get					MeetingCtl.get
+
+# Activity
+
+GET		/houtai/activity/page				ActivityCtl.page
+POST	/houtai/activity/edit				ActivityCtl.edit
+GET		/houtai/activity/edit				ActivityCtl.edit
+POST	/houtai/activity/save				ActivityCtl.save
+POST	/houtai/activity/get				ActivityCtl.get
+
+# CunGanBu
+
+GET		/houtai/cunGanBu/page				CunGanBuCtl.page
+POST	/houtai/cunGanBu/edit				CunGanBuCtl.edit
+GET		/houtai/cunGanBu/edit				CunGanBuCtl.edit
+POST	/houtai/cunGanBu/save				CunGanBuCtl.save
+POST	/houtai/cunGanBu/get				CunGanBuCtl.get
+
+# CunRongCunMao
+
+GET		/houtai/cunRongCunMao/page				CunRongCunMaoCtl.page
+POST	/houtai/cunRongCunMao/edit				CunRongCunMaoCtl.edit
+GET		/houtai/cunRongCunMao/edit				CunRongCunMaoCtl.edit
+POST	/houtai/cunRongCunMao/save				CunRongCunMaoCtl.save
+POST	/houtai/cunRongCunMao/get				CunRongCunMaoCtl.get
+
+# GroupHonor
+
+GET		/houtai/groupHonor/page				GroupHonorCtl.page
+POST	/houtai/groupHonor/edit				GroupHonorCtl.edit
+GET		/houtai/groupHonor/edit				GroupHonorCtl.edit
+POST	/houtai/groupHonor/save				GroupHonorCtl.save
+POST	/houtai/groupHonor/get				GroupHonorCtl.get
+
+# PersonalHonor
+
+GET		/houtai/personalHonor/page				PersonalHonorCtl.page
+POST	/houtai/personalHonor/edit				PersonalHonorCtl.edit
+GET		/houtai/personalHonor/edit				PersonalHonorCtl.edit
+POST	/houtai/personalHonor/save				PersonalHonorCtl.save
+POST	/houtai/personalHonor/get				PersonalHonorCtl.get
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

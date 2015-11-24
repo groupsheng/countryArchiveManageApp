@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee 
+ * 
  * @date 2015/11/23
+ * 
+ * @table 合同协议实体类（文书档案）
  */
 
 @Entity

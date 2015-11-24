@@ -13,7 +13,10 @@ import play.db.jpa.GenericModel;
 
 /**
  * @author Coffee
- *
+ * 
+ * @date 2015/11/23
+ * 
+ * @table 股权合作实体类（文书档案）
  */
 @Entity
 public class GuquanCooperation extends GenericModel{
